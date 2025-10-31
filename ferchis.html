@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CETIS 47 - José María Morelos y Pavón</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <style>
+    /* 🎨 Estilos básicos del carrusel */
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .carousel h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333; /* Color de ejemplo, ajústalo según style.css */
+    }
+
+    .carousel-track {
+      display: flex;
+      /* Hace la transición de 0.5 segundos para la animación del deslizamiento */
+      transition: transform 0.5s ease-in-out; 
+    }
+
+    .carousel img {
+      width: 100%;
+      /* Asegura que la imagen no se encoja */
+      flex-shrink: 0; 
+      height: 400px;
+      /* Cubre el área manteniendo la proporción */
+      object-fit: cover; 
+    }
+
+    /* Botones de navegación */
+    .carousel button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 24px;
+      border-radius: 50%;
+      /* Asegura que los botones estén por encima de las imágenes */
+      z-index: 10; 
+    }
+
+    .carousel .prev {
+      left: 10px;
+    }
+
+    .carousel .next {
+      right: 10px;
+    }
+
+    .carousel button:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Estilos del Iframe para el video */
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-top: 20px;
+    }
+
+    /* Estilos para que el aside y el article se muestren lado a lado en pantallas grandes */
+    main {
+      display: flex;
+      flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    main article {
+      flex: 3; /* Ocupa más espacio */
+      min-width: 300px;
+    }
+
+    main aside {
+      flex: 1; /* Ocupa menos espacio */
+      min-width: 250px;
+      background-color: #f4f4f4; /* Color de fondo para el aside */
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CETIS 47</h1>
+    <p>"José María Morelos y Pavón"</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li> 
+      <li><a href="https://escolaresmx.com/" target="_blank">EscolaresMX</a></li>
+      <li><a href="https://www.gob.mx/becasbenitojuarez" target="_blank">Becas</a></li>
+      <li><a href="talleres.html">Talleres</a></li> 
+      <li><a href="carreras.html">Carreras</a></li>
+    </ul>
+    <form>
+      <input type="search" placeholder="Buscar...">
+      <button type="submit">🔍</button>
+    </form>
+  </nav>
+
+  <section class="carousel">
+    <h2>IMÁGENES DEL CETIS 47</h2>
+    <div class="carousel-track">
+      <img src="WhatsApp Image 2025-10-30 at 5.45.33 PM.jpeg" alt="Instalaciones CETIS">
+      <img src="WhatsApp Image 2025-10-29 at 5.44.21 PM.jpeg" alt="Escolta">
+      <img src="WhatsApp Image 2025-10-29 at 5.44.47 PM.jpeg" alt="Explanada CETIS">
+    </div>
+    <button class="prev" onclick="moverSlide(-1)">❮</button>
+    <button class="next" onclick="moverSlide(1)">❯</button>
+  </section>
+
+  <main>
+    <article>
+      <h2>Escuela Preparatoria "José María Morelos y Pavón"</h2>
+      <p>
+        El CETIS 47 es un centro de estudios tecnológicos industriales y de servicios ubicado en **Gómez Palacio, Durango**.<br>
+        Mejor conocido como **CETIS 47 “José María Morelos y Pavón”**, ofrece educación de nivel medio superior.<br>
+        Cuenta con dos turnos: **Matutino** y **Vespertino**.
+      </p>
+
+      <h3>Contacto</h3>
+      <p>
+        📍 **Calzada Lázaro Cárdenas S/N**, Armando del Castillo, 35070 Gómez Palacio, DGO.<br>
+        🏫 CCT: **10DCT0047I** <br>
+        ☎️ Tel: **871 719 0867** <br>
+        ✉️ Correo: <a href="mailto:cbtis47.dir@live.edu.cems.gob.mx">cbtis47.dir@live.edu.cems.gob.mx</a>
+      </p>
+
+      <iframe src="https://www.youtube.com/embed/nHifklEeKmA?si=BaZ_pPb6x-JKZkrc" 
+              title="Video institucional del CETIS 47" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+    </article>
+
+    <aside>
+      <h2>🎓 Carreras y Especialidades</h2>
+      <ul>
+        <li>**Programación**</li>
+        <li>**Contabilidad**</li>
+        <li>**Administración de Recursos Humanos**</li>
+        <li>**Refrigeración y Climatización**</li>
+        <li>**Mantenimiento Industrial**</li>
+        <li>**Inteligencia Artificial**</li>
+        <li>**Robótica y Automatización**</li>
+      </ul>
+
+      <h2>🎭 Talleres</h2>
+      <ul>
+        <li>Escolta</li>
+        <li>Danza Folclórica</li>
+        <li>Rondalla</li>
+        <li>Fútbol</li>
+        <li>Básquetbol</li>
+        <li>Lectura</li>
+        <li>Música Folclórica</li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 CETIS 47 - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.carousel img');
+    const track = document.querySelector('.carousel-track');
+    const totalSlides = slides.length; // Obtiene el número total de imágenes
+
+    function moverSlide(direccion) {
+      slideIndex += direccion;
+      
+      // Control de límites (Cíclico)
+      if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
+      } else if (slideIndex >= totalSlides) {
+        slideIndex = 0;
+      }
+      
+      // Aplica la transformación para mover el carrusel
+      // Mueve el track al porcentaje (0%, -100%, -200%, etc.)
+      track.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+
+    // Asegura que al cargar la página se muestre el primer slide
+    moverSlide(0); 
+
+    // Cambio automático cada 5 segundos
+    setInterval(() => moverSlide(1), 5000); 
+  </script>
+</body>
+</html>
