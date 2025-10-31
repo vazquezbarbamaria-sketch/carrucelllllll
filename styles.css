@@ -1,0 +1,202 @@
+/* Encabezados */
+h1 {
+  color: rgb(231, 161, 216);
+}
+
+h2 {
+  color: rgb(160, 95, 125);
+}
+
+h3 {
+  color: rgb(187, 101, 173);
+}
+
+p {
+  color: rgb(218, 122, 218);
+}
+
+/* General */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(231, 167, 240);
+  color: rgb(226, 131, 245);
+}
+
+/* Encabezado */
+header {
+  text-align: center;
+  background-color: rgb(219, 196, 230);
+  color: rgb(240, 193, 253);
+  padding: 20px;
+  font-size: 28px;
+  text-shadow: 2px 2px 5px #d16bc0;
+}
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(180, 107, 164);
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(255, 230, 255);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 180, 230);
+}
+
+nav form {
+  display: flex;
+  gap: 5px;
+}
+
+nav input[type="search"] {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+nav input[type="submit"] {
+  background-color: rgb(80, 40, 80);
+  color: rgb(255, 200, 255);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+nav input[type="submit"]:hover {
+  background-color: #e2b3e0;
+}
+
+/* Contenido principal */
+main {
+  display: flex;
+  margin: 20px;
+  gap: 20px;
+}
+
+article {
+  flex: 3;
+  background-color: rgb(235, 204, 223);
+  padding: 20px;
+  border: 1px solid rgb(213, 172, 221);
+  border-radius: 8px;
+}
+
+article h2 {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(192, 124, 162);
+}
+
+article h3 {
+  color: #000000;
+  margin-top: 15px;
+}
+
+/* Barra lateral */
+aside {
+  flex: 1;
+  background-color: rgb(231, 165, 204);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+aside h2 {
+  color: #000000;
+}
+
+aside ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* Pie de página */
+footer {
+  background-color: #000000;
+  color: beige;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+
+
+
+.carrusel {
+  text-align: center;
+  margin: 40px auto;
+  background-color: rgb(235, 204, 223);
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  position: relative;
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.slides img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Botones */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(189, 151, 199, 0.897);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
